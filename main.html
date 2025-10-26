@@ -1,35 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-  <body>
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <span class="logo_name">company</span>
-          </div>
-          <div class="media-icons">
-            <!-- your code here -->
-          </div>
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    /* Top: Logo + Social icons */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .logo_name {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .media-icons i {
+      font-size: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .media-icons i:hover {
+      color: #2ecc71;
+    }
+
+    /* Link sections */
+    .link-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .link-boxes div {
+      flex: 1 1 180px;
+      margin: 10px;
+    }
+
+    .link-boxes div a {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 2px solid #2ecc71;
+      padding-bottom: 3px;
+    }
+
+    .link-boxes div ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .link-boxes div ul li {
+      margin-bottom: 8px;
+      color: #bbb;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .link-boxes div ul li:hover {
+      color: #2ecc71;
+    }
+
+    /* Bottom details */
+    .bottom-details {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .top, .link-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .link-boxes div {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .media-icons i {
+        margin: 10px 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">Company</span>
         </div>
-        <div class="link-boxes">
-          <!-- your code here -->
+        <div class="media-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-square-youtube"></i>
         </div>
       </div>
-      <div class="bottom-details">
-        <!-- your code here -->
+
+      <div class="link-boxes">
+        <div class="links">
+          <a>Links</a>
+          <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About Us</li>
+            <li>Get Started</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <a>Services</a>
+          <ul>
+            <li>Web Development</li>
+            <li>SEO</li>
+            <li>Marketing</li>
+            <li>Support</li>
+          </ul>
+        </div>
+
+        <div class="othr-service">
+          <a>Other Services</a>
+          <ul>
+            <li>Blog</li>
+            <li>Portfolio</li>
+            <li>FAQs</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <a>Contact</a>
+          <ul>
+            <li>Phone: 8879887262</li>
+            <li>Email: info@company.com</li>
+            <li>Address: City, Country</li>
+            <li>Support</li>
+          </ul>
+        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div class="bottom-details">
+      &copy; 2025 Company Name. All rights reserved.
+    </div>
+  </footer>
+</body>
 </html>
+
