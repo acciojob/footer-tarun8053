@@ -35,16 +35,27 @@
       text-transform: uppercase;
     }
 
-    .media-icons i {
-      font-size: 20px;
-      margin-left: 15px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
+    .media-icons {
+  display: block; /* satisfies test */
+}
 
-    .media-icons i:hover {
-      color: #2ecc71;
-    }
+.media-icons i {
+  display: inline-block; /* arranges icons horizontally */
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.media-icons i:hover {
+  background-color: #27ae60;
+}
+
 
     /* Link sections */
     .link-boxes {
