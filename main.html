@@ -18,7 +18,8 @@
       padding: 40px 20px;
     }
 
-    .footer-container {
+    /* ✅ Changed from .footer-container to .link-boxes */
+    .link-boxes {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -94,7 +95,7 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .footer-container {
+      .link-boxes {
         flex-direction: column;
         text-align: center;
       }
@@ -110,7 +111,8 @@
 
   <!-- Footer Section -->
   <footer>
-    <div class="footer-container">
+    <!-- ✅ Changed to .link-boxes -->
+    <div class="link-boxes">
       <div class="footer-section">
         <h3>Home</h3>
         <p>Welcome to our company website. Explore our services and know more about us.</p>
