@@ -2,191 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Footer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Responsive Footer</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     footer {
-      background-color: #222;
+      background-color: #111;
       color: #fff;
-      padding: 40px 20px 20px;
+      padding: 40px 20px;
     }
 
-    /* Top: Logo + Social icons */
-    .top {
+    .footer-container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .logo_name {
-      font-size: 24px;
-      font-weight: bold;
-      text-transform: uppercase;
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 15px;
+      color: #00bcd4;
+      font-size: 18px;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin: 8px 0;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #00bcd4;
     }
 
     .media-icons {
-  display: flex; /* satisfies test */
-}
-
-.media-icons i {
-  display: flex; /* arranges icons horizontally */
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  background-color: #2ecc71;
-  color: white;
-  border-radius: 50%;
-  margin-right: 10px;
-  transition: background-color 0.3s;
-}
-
-.media-icons i:hover {
-  background-color: #27ae60;
-}
-
-
-    /* Link sections */
-    .link-boxes {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .link-boxes div {
-      flex: 1 1 180px;
-      margin: 10px;
-    }
-
-    .link-boxes div a {
-      display: flex;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 2px solid #2ecc71;
-      padding-bottom: 3px;
-    }
-
-    .link-boxes div ul {
-      list-style: none;
+      gap: 10px;
       margin-top: 10px;
     }
 
-    .link-boxes div ul li {
-      margin-bottom: 8px;
-      color: #bbb;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .link-boxes div ul li:hover {
-      color: #2ecc71;
-    }
-
-    /* Bottom details */
-    .bottom-details {
+    .media-icons a {
+      display: inline-block;
+      background-color: #222;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
       text-align: center;
+      line-height: 40px;
+      color: #fff;
+      font-size: 20px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .media-icons a:hover {
+      background-color: #00bcd4;
+      transform: translateY(-5px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      margin-top: 30px;
       font-size: 14px;
       color: #aaa;
-      border-top: 1px solid #444;
-      padding-top: 10px;
     }
 
-    /* Responsive */
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .top, .link-boxes {
+      .footer-container {
         flex-direction: column;
-        align-items: center;
-      }
-
-      .link-boxes div {
-        flex: 1 1 100%;
         text-align: center;
       }
-
-      .media-icons i {
-        margin: 10px 5px 0;
+      .media-icons {
+        justify-content: center;
       }
     }
   </style>
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <!-- Footer Section -->
   <footer>
-    <div class="content">
-      <div class="top">
-        <div class="logo-details">
-          <span class="logo_name">Company</span>
-        </div>
-        <div class="media-icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-square-instagram"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-square-youtube"></i>
-        </div>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Home</h3>
+        <p>Welcome to our company website. Explore our services and know more about us.</p>
       </div>
 
-      <div class="link-boxes">
-        <div class="links">
-          <a>Links</a>
-          <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About Us</li>
-            <li>Get Started</li>
-          </ul>
-        </div>
+      <div class="footer-section">
+        <h3>About</h3>
+        <p>We are dedicated to delivering top-quality solutions and value to our clients worldwide.</p>
+      </div>
 
-        <div class="service">
-          <a>Services</a>
-          <ul>
-            <li>Web Development</li>
-            <li>SEO</li>
-            <li>Marketing</li>
-            <li>Support</li>
-          </ul>
-        </div>
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Home Page</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
 
-        <div class="othr-service">
-          <a>Other Services</a>
-          <ul>
-            <li>Blog</li>
-            <li>Portfolio</li>
-            <li>FAQs</li>
-            <li>Careers</li>
-          </ul>
-        </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+        </ul>
+      </div>
 
-        <div class="contact">
-          <a>Contact</a>
-          <ul>
-            <li>Phone: 8879887262</li>
-            <li>Email: info@company.com</li>
-            <li>Address: City, Country</li>
-            <li>Support</li>
-          </ul>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Contact Number: <strong>8879887262</strong></p>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
 
-    <div class="bottom-details">
-      &copy; 2025 Company Name. All rights reserved.
+    <div class="footer-bottom">
+      <p>&copy; 2025 Company Name. All Rights Reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
-
